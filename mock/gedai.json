@@ -1,0 +1,41 @@
+[
+  {
+    "request": {
+      "uri": "/index.php/Electric/getElectricData",
+      "queries": {
+        "functionName": "GD",
+        "ipId": "123456"
+      }
+    },
+    "response": {
+      "json": {
+        "code": 200,
+        "info": "",
+        "data": {
+          "id": "3896118",
+          "state": "5",
+          "time": "1509414362",
+          "loan_type": "工薪贷",
+          "presona_id": "550",
+          "upridk_time": "1509416403",
+          "xinshen_time": "1521439321",
+          "into_id": "17103121020201134541",
+          "account_money": null,
+          "account_time": null,
+          "shen_ok_time": null,
+          "amt": null,
+          "real_time": "",
+          "jg_ed": "0",
+          "presona_name": null,
+          "enter_state": 0,
+          "examine_result": "3",
+          "risk_apply": "0",
+          "huitui_time": "",
+          "refusal_reason": "",
+          "refuse_mreason": null,
+          "refuse_sreason": "其他"
+        }
+      }
+    }
+  }
+]

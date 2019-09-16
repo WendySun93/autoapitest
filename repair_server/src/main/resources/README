@@ -1,0 +1,10 @@
+#参数赋值可采用以下方式
+
+1. javabean注入
+
+
+2. 使用map赋值,map.put("canshu","canshuzhi");
+
+
+3. 直接赋值
+

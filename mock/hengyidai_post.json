@@ -1,0 +1,56 @@
+[
+  {
+    "request": {
+      "method": "post",
+      "uri": "/core-service/UserDXInfoService/getUserDXInfo",
+      "forms": {
+        "userId": "1127f18a76f44dd29d5a6181ddd00164"
+      }
+    },
+    "response": {
+      "json": {
+        "rspCode": 200,
+        "rspMsg": "成功",
+        "showMsg": "成功",
+        "data": [
+          {
+            "baseInfo": 1,
+            "bankCreditAuth": null,
+            "identityAuth": 1,
+            "rejectedTime": null,
+            "gender": "2",
+            "contactInfo": 1,
+            "loanType": 1001,
+            "phoneAuthReason": null,
+            "userPhone": "15110102688",
+            "number": "945302199402016675",
+            "phoneAuth": 1,
+            "sourceChannels": 1001,
+            "businessSts": 0,
+            "applicationAmount": 2000,
+            "registTime": 1494383600000,
+            "contCode": null,
+            "signTime": null,
+            "actualAmount": null,
+            "bankCreditAuthReason": null,
+            "makeLoansTime": null,
+            "userName": "926孙文娟",
+            "userId": "1127f18a76f44dd29d5a6181ddd00164",
+            "utmCode": "201",
+            "stageNum": 0,
+            "configStatusTXL": 0,
+            "sourceType": "1",
+            "createTime": 1534166481000,
+            "auditTime": 1537495131000,
+            "loanSts": 10210,
+            "configStatusDL": 1,
+            "creditAmount": null,
+            "loanId": "loanf18a76f44dd29d5a6181ddd10001",
+            "age": 18,
+            "applicationStageNum": 12
+          }
+        ]
+      }
+    }
+  }
+]
