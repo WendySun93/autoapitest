@@ -1,4 +1,4 @@
-package restclient;
+package com.research.repair.utils.restclient;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;

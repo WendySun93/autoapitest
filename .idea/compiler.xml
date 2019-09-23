@@ -8,13 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="repair_server" />
         <module name="repair_tools" />
+        <module name="springboot" />
         <module name="utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mock" target="1.5" />
       <module name="repair_server" target="1.8" />
       <module name="repair_tools" target="1.8" />
+      <module name="springboot" target="1.8" />
       <module name="utils" target="1.8" />
     </bytecodeTargetLevel>
   </component>

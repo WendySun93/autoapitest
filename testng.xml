@@ -3,14 +3,14 @@
 <suite name="文娟测试">
     <test name ="这些是测试模块">
         <classes >
-            <class name="CommunitySearchTest">
+            <class name="com.research.repair.repairserver.CommunitySearchTest">
                 <methods>
                     <include name="TestcommunitySearchWithProvinceCity" />
                     <include name="TestcommunitySearchWithoutProvince" />
                     <include name="TestcommunitySearchWithoutCounty" />
                 </methods>
             </class>
-            <class name="FindCommunityFromAddressTest">
+            <class name="com.research.repair.repair_tools.FindCommunityFromAddressTest">
                 <methods>
                     <include name="TestcommunitySearchWithProvinceCity" />
                     <include name="TestcommunitySearchWithoutProvince" />
@@ -20,7 +20,7 @@
         </classes>
     </test>
     <listeners>
-        <listener class-name="extentreport.ExtentTestNGIReporterListener">
+        <listener class-name="com.research.repair.utils.extentreport.ExtentTestNGIReporterListener">
         </listener>
     </listeners>
 </suite>

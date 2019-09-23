@@ -1,3 +1,4 @@
+package com.research.repair.repairserver;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -5,7 +6,7 @@ import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import restclient.RestClient;
+import com.research.repair.utils.restclient.RestClient;
 
 
 import java.io.IOException;

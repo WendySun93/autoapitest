@@ -1,10 +1,12 @@
+package com.research.repair.repair_tools;
 import com.alibaba.fastjson.JSON;
+import com.research.repair.repair_tools.PythonAddress;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import restclient.RestClient;
+import com.research.repair.utils.restclient.RestClient;
 
 import java.io.IOException;
 import java.net.URLEncoder;
