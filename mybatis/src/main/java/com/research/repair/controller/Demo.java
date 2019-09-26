@@ -1,6 +1,6 @@
 package com.research.repair.controller;
 
-import com.research.repair.model.User;
+import com.research.repair.model.DemoUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -24,33 +24,33 @@ public class Demo {
     @GetMapping(value="/getUserCount")
     @ApiOperation(value="获取到用户数")
     public int getUserCount() {
-        return template.selectOne("getUserCount");
+        return template.selectOne("getUserCount1");
     }
 
     @PostMapping(value="/addUser")
     @ApiOperation(value="添加用户")
-    public int addUser(@RequestBody User user) {
-        int result = template.insert("addUser",user);
+    public int addUser(@RequestBody DemoUser user) {
+        int result = template.insert("addUser1",user);
         return result;
     }
 
 
     @PostMapping(value="/updateUser")
     @ApiOperation(value="修改用户")
-    public int updateUser(@RequestBody User user) {
-        int result = template.update("updateUser",user);
+    public int updateUser(@RequestBody DemoUser user) {
+        int result = template.update("updateUser1",user);
         return result;
     }
-    @PostMapping(value="/deleteUser1")
+    @PostMapping(value="/deleteUser2")
     @ApiOperation(value="删除用户")
     public int deleteUser(@RequestParam(value = "id") int id) {
-        int result = template.delete("deleteUser",id);
+        int result = template.delete("deleteUser1",id);
         return result;
     }
     @PostMapping(value="/deleteUser")
     @ApiOperation(value="删除用户")
-    public int deleteUser(@RequestBody User user) {
-        int result = template.delete("deleteUser",user);
+    public int deleteUser(@RequestBody DemoUser user) {
+        int result = template.delete("deleteUser1",user);
         return result;
     }
 }

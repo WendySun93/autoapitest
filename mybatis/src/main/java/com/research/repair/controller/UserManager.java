@@ -1,5 +1,6 @@
 package com.research.repair.controller;
 
+import com.research.repair.model.DemoUser;
 import com.research.repair.model.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -19,8 +20,8 @@ import java.util.Objects;
 
 @Slf4j
 @RestController
-@Api(value = "v1", description = "用户管理系统")
-@RequestMapping()
+@Api(value = "user", description = "用户管理系统")
+@RequestMapping("user")
 public class UserManager {
     @Autowired
     private SqlSessionTemplate sqlSessionTemplate;
@@ -33,7 +34,7 @@ public class UserManager {
         response.addCookie(cookie);
         log.info("查询到的结果是" + i);
         if (i > 0) {
-            log.info("登录的用户是:" + user.getName());
+            log.info("登录的用户是:" + user.getUserName());
             return true;
         }
         return false;
@@ -56,10 +57,10 @@ public class UserManager {
 
     @PostMapping(value = "/getUserInfo")
     @ApiOperation(value = "获取用户(列表)信息接口")
-    public List<User> getUserInfo(HttpServletRequest request, @RequestBody User user) {
+    public List<DemoUser> getUserInfo(HttpServletRequest request, @RequestBody User user) {
         Boolean x = verifyCookies(request);
         if (x == true) {
-            List<User> users = sqlSessionTemplate.selectList("getUserList", user);
+            List<DemoUser> users = sqlSessionTemplate.selectList("getUserList", user);
             log.info("getUserInfo获取到的用户数量是:" + users.size());
             return users;
         }

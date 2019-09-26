@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.research.repair.model">
+    <select id="getUserCount1" resultType="Integer">
+        select count(*) from user;
+    </select>
+    <insert id="addUser1" parameterType="com.research.repair.model.DemoUser">
+        insert into user(name,age,sex) values (#{name},#{age},#{sex});
+    </insert>
+    <update id="updateUser1" parameterType="com.research.repair.model.DemoUser">
+        update user set name=#{name}, age=#{age} ,sex=#{sex} where id=#{id}
+    </update>
+    <delete id="deleteUser1" parameterType="Integer">
+        delete from user where id =#{id}
+    </delete>
+</mapper>
