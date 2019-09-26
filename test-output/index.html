@@ -14,7 +14,7 @@
 	
 		<link href='http://extentreports.com/resx/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>Wconcept-Api自动化测试报告</title>
+	<title>Api自动化测试报告</title>
 
 	<style type='text/css'>
 		.node.level-1  ul{ display:none;} .node.level-1.active ul{display:block;}
@@ -37,7 +37,7 @@
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>Wconcept-Api自动化测试报告</span>
+		<span class='report-name'>Api自动化测试报告</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -45,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-				<span class='label suite-start-time'>Sep 11, 2019 1:50:12 PM</span>
+				<span class='label suite-start-time'>Sep 24, 2019 10:10:02 AM</span>
 			</a>
 			<a href='#!'>
 				<span class='label'>v3.0.3</span>
@@ -118,10 +118,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>4</span> test(s) passed</span>
+					<span><span class='strong'>2</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>2</span> test(s) failed, <span class='strong'>0</span> others
+					<span class='strong'>4</span> test(s) failed, <span class='strong'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -133,10 +133,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>4</span> step(s) passed</span>
+					<span><span class='strong'>2</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>2</span> step(s) failed, <span class='strong'>0</span> others
+					<span class='strong'>4</span> step(s) failed, <span class='strong'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -153,15 +153,15 @@
 				
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>TestcommunitySearchWithoutCounty---</span>
-						<span class='test-time'>Sep 11, 2019 1:50:16 PM</span>
+						<span class='test-name'>TestcommunitySearchWithProvinceCity---省市村均填写</span>
+						<span class='test-time'>Sep 24, 2019 10:10:02 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 11, 2019 1:50:16 PM</span>
-	<span class='label end-time'>Sep 11, 2019 1:50:17 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+6ms</span>
+	<span class='label start-time'>Sep 24, 2019 10:10:02 AM</span>
+	<span class='label end-time'>Sep 24, 2019 10:10:05 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+800ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -175,13 +175,20 @@
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>1:50:18 PM</td>
-					<td class='step-details'><pre>java.lang.AssertionError: expected [054700] but found [061728]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:563)
-	at CommunitySearchTest.TestcommunitySearchWithoutCounty(CommunitySearchTest.java:88)
+					<td class='timestamp'>10:10:09 AM</td>
+					<td class='step-details'><pre>org.apache.http.conn.HttpHostConnectException: Connect to localhost:2160 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at com.research.repair.utils.restclient.RestClient.post(RestClient.java:63)
+	at com.research.repair.repairserver.CommunitySearchTest.TestcommunitySearchWithProvinceCity(CommunitySearchTest.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -209,6 +216,18 @@
 	at org.testng.TestNG.run(TestNG.java:1000)
 	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
 	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 38 more
 </pre></td>
 				</tr>
 			</tbody>
@@ -220,15 +239,15 @@
 				
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>TestcommunitySearchWithoutCounty---</span>
-						<span class='test-time'>Sep 11, 2019 1:50:17 PM</span>
+						<span class='test-name'>TestcommunitySearchWithoutProvince---不填写省份,只填写市县村</span>
+						<span class='test-time'>Sep 24, 2019 10:10:05 AM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 11, 2019 1:50:17 PM</span>
-	<span class='label end-time'>Sep 11, 2019 1:50:18 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+271ms</span>
+	<span class='label start-time'>Sep 24, 2019 10:10:05 AM</span>
+	<span class='label end-time'>Sep 24, 2019 10:10:07 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+7ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -242,7 +261,179 @@
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>1:50:18 PM</td>
+					<td class='timestamp'>10:10:09 AM</td>
+					<td class='step-details'><pre>org.apache.http.conn.HttpHostConnectException: Connect to localhost:2160 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at com.research.repair.utils.restclient.RestClient.post(RestClient.java:63)
+	at com.research.repair.repairserver.CommunitySearchTest.TestcommunitySearchWithoutProvince(CommunitySearchTest.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 38 more
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>TestcommunitySearchWithoutCounty---不填写省市县级,只有村落</span>
+						<span class='test-time'>Sep 24, 2019 10:10:07 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 24, 2019 10:10:07 AM</span>
+	<span class='label end-time'>Sep 24, 2019 10:10:09 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+10ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>10:10:09 AM</td>
+					<td class='step-details'><pre>org.apache.http.conn.HttpHostConnectException: Connect to localhost:2160 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at com.research.repair.utils.restclient.RestClient.post(RestClient.java:63)
+	at com.research.repair.repairserver.CommunitySearchTest.TestcommunitySearchWithoutCounty(CommunitySearchTest.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 38 more
+</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>TestcommunitySearchWithoutCounty---</span>
+						<span class='test-time'>Sep 24, 2019 10:10:09 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 24, 2019 10:10:09 AM</span>
+	<span class='label end-time'>Sep 24, 2019 10:10:09 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+297ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>10:10:09 AM</td>
 					<td class='step-details'><pre>com.alibaba.fastjson.JSONException: syntax error, pos 1, json : id:54721;level:4;area_code:130921206201;zip_code:061728;tele_code:0317;name:东街村委会;short_name:东街;merger_name:河北_沧州_沧县_杜林_东街;pinyin:DongJie;lng:116.76588999999998;lat:38.339909999999996;town_code:130921206000;town_name:杜林回族乡;county_code:130921000000;county_name:沧县;city_code:130900000000;city_name:沧州市;province_code:130000000000;province_name:河北省;other:0;phone_number:[]
 	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1436)
 	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1322)
@@ -250,7 +441,7 @@
 	at com.alibaba.fastjson.JSON.parse(JSON.java:162)
 	at com.alibaba.fastjson.JSON.parse(JSON.java:131)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:223)
-	at FindCommunityFromAddressTest.TestcommunitySearchWithoutCounty(FindCommunityFromAddressTest.java:94)
+	at com.research.repair.repair_tools.FindCommunityFromAddressTest.TestcommunitySearchWithoutCounty(FindCommunityFromAddressTest.java:96)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -287,85 +478,17 @@
 				</li>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
-					<div class='test-heading'>
-						<span class='test-name'>TestcommunitySearchWithProvinceCity---</span>
-						<span class='test-time'>Sep 11, 2019 1:50:12 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Sep 11, 2019 1:50:12 PM</span>
-	<span class='label end-time'>Sep 11, 2019 1:50:15 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+63ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:50:18 PM</td>
-					<td class='step-details'>Test passed</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
-					<div class='test-heading'>
-						<span class='test-name'>TestcommunitySearchWithoutProvince---</span>
-						<span class='test-time'>Sep 11, 2019 1:50:15 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Sep 11, 2019 1:50:15 PM</span>
-	<span class='label end-time'>Sep 11, 2019 1:50:16 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+32ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:50:18 PM</td>
-					<td class='step-details'>Test passed</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
 					<div class='test-heading'>
 						<span class='test-name'>TestcommunitySearchWithProvinceCity---</span>
-						<span class='test-time'>Sep 11, 2019 1:50:17 PM</span>
+						<span class='test-time'>Sep 24, 2019 10:10:09 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 11, 2019 1:50:17 PM</span>
-	<span class='label end-time'>Sep 11, 2019 1:50:17 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+131ms</span>
+	<span class='label start-time'>Sep 24, 2019 10:10:09 AM</span>
+	<span class='label end-time'>Sep 24, 2019 10:10:09 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+143ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -379,7 +502,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:50:18 PM</td>
+					<td class='timestamp'>10:10:09 AM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -392,14 +515,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
 					<div class='test-heading'>
 						<span class='test-name'>TestcommunitySearchWithoutProvince---</span>
-						<span class='test-time'>Sep 11, 2019 1:50:17 PM</span>
+						<span class='test-time'>Sep 24, 2019 10:10:09 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 11, 2019 1:50:17 PM</span>
-	<span class='label end-time'>Sep 11, 2019 1:50:17 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+88ms</span>
+	<span class='label start-time'>Sep 24, 2019 10:10:09 AM</span>
+	<span class='label end-time'>Sep 24, 2019 10:10:09 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+114ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -413,7 +536,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>1:50:18 PM</td>
+					<td class='timestamp'>10:10:09 AM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -487,8 +610,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 11, 2019 1:50:17 PM</td>
-										<td class='linked' test-id='2'>TestcommunitySearchWithoutCounty---</td>
+										<td>Sep 24, 2019 10:10:09 AM</td>
+										<td class='linked' test-id='4'>TestcommunitySearchWithoutCounty---</td>
 										<td><pre><pre>com.alibaba.fastjson.JSONException: syntax error, pos 1, json : id:54721;level:4;area_code:130921206201;zip_code:061728;tele_code:0317;name:东街村委会;short_name:东街;merger_name:河北_沧州_沧县_杜林_东街;pinyin:DongJie;lng:116.76588999999998;lat:38.339909999999996;town_code:130921206000;town_name:杜林回族乡;county_code:130921000000;county_name:沧县;city_code:130900000000;city_name:沧州市;province_code:130000000000;province_name:河北省;other:0;phone_number:[]
 	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1436)
 	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1322)
@@ -496,7 +619,7 @@
 	at com.alibaba.fastjson.JSON.parse(JSON.java:162)
 	at com.alibaba.fastjson.JSON.parse(JSON.java:131)
 	at com.alibaba.fastjson.JSON.parseObject(JSON.java:223)
-	at FindCommunityFromAddressTest.TestcommunitySearchWithoutCounty(FindCommunityFromAddressTest.java:94)
+	at com.research.repair.repair_tools.FindCommunityFromAddressTest.TestcommunitySearchWithoutCounty(FindCommunityFromAddressTest.java:96)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -561,19 +684,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 11, 2019 1:50:12 PM</div>
+					<div class='panel-lead'>Sep 24, 2019 10:10:02 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 11, 2019 1:50:18 PM</div>
+			 		<div class='panel-lead'>Sep 24, 2019 10:10:09 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>5,690ms</div>
+					<div class='panel-lead'>7,517ms</div>
 				</div>
 			</div>
 		</div>
@@ -585,22 +708,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 4,
-				failParent: 2,
+				passParent: 2,
+				failParent: 4,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 2,
+				exceptionsParent: 4,
 				
-				passChild: 4,
-				failChild: 2,
+				passChild: 2,
+				failChild: 4,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
+				exceptionsChild: 4,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

@@ -16,7 +16,7 @@ public class SwaggerUtils {
                 .title("自己搭建的Swagger2 RESTful APIs")
                 .termsOfServiceUrl("http://blog.didispace.com/")
                 .contact(new Contact("wenjuan", "https://github.com/swagger-api/swagger-ui", "1010946772@qq.com"))
-                .description("这是我自己的swagger-ui生成的接口文档")
+                .description("这是用户管理系统的接口文档")
                 .version("1.0")
                 .build();
     }

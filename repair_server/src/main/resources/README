@@ -6,5 +6,5 @@
 2. 使用map赋值,map.put("canshu","canshuzhi");
 
 
-3. 直接赋值
+3. 构造方法直接赋值
 

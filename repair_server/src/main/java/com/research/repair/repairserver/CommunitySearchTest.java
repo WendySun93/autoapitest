@@ -3,6 +3,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.util.EntityUtils;
+import org.springframework.context.annotation.Description;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -27,7 +28,7 @@ public class CommunitySearchTest {
     }
 
     //省市村庄都有
-    @Test
+    @Test(description = "省市村均填写")
     public void TestcommunitySearchWithProvinceCity() throws IOException {
         String testUrl = url + bundle.getString("commutity.uri") ;
         restClient = new RestClient();
@@ -49,7 +50,7 @@ public class CommunitySearchTest {
     }
 
     //不填省份
-    @Test
+    @Test(description = "不填写省份,只填写市县村")
     public void TestcommunitySearchWithoutProvince() throws IOException {
         String testUrl = url + bundle.getString("commutity.uri") ;
         restClient = new RestClient();
@@ -70,7 +71,7 @@ public class CommunitySearchTest {
     }
 
     //不填县
-    @Test
+    @Test(description = "不填写省市县级,只有村落")
     public void TestcommunitySearchWithoutCounty() throws IOException {
         String testUrl = url + bundle.getString("commutity.uri") ;
         restClient = new RestClient();
