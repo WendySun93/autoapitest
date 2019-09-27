@@ -2,8 +2,13 @@ server:
   port: 6666
 
 logging:
-  path: logs
-  file: test.log
+  path: classpath:conf/logback.xml
+
+logging.level:
+  org.springframework: error
+  org.apache.shiro: error
+  org.hibernate.SQL: error
+  com.research.repair: debug
 
 spring:
   application:

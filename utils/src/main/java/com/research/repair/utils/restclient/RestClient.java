@@ -64,14 +64,12 @@ public class RestClient {
         return httpResponse;
     }
 
-    //4. POST方法
+    //4. POST方法(不带请求体)
     public CloseableHttpResponse post(String url ,HashMap<String, String> headermap) throws ClientProtocolException, IOException {
         //创建一个可关闭的HttpClient对象
         CloseableHttpClient httpclient = HttpClients.createDefault();
         //创建一个HttpPost的请求对象
         HttpPost httppost = new HttpPost(url);
-        httppost.setEntity(new StringEntity("", Charset.forName("UTF-8")));
-
         //加载请求头到httppost对象
         for (Map.Entry<String, String> entry : headermap.entrySet()) {
             httppost.addHeader(entry.getKey(), entry.getValue());
@@ -80,6 +78,7 @@ public class RestClient {
         CloseableHttpResponse httpResponse = httpclient.execute(httppost);
         return httpResponse;
     }
+
 
 
 }

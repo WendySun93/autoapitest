@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="文娟测试">
+    <test name ="这些是测试模块">
+        <classes >
+            <class name="com.research.repair.cases.LoginTest">
+                <methods>
+                    <include name="loginTrue" />
+                </methods>
+            </class>
+            <class name="com.research.repair.cases.AddUserTest">
+            </class>
+            <class name="com.research.repair.cases.GetUserListTest">
+
+            </class>
+            <class name="com.research.repair.cases.GetUserInfoTest">
+
+            </class>
+            <class name="com.research.repair.cases.UpdateUserInfoTest">
+
+            </class>
+
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.research.repair.utils.extentreport.ExtentTestNGIReporterListener">
+        </listener>
+    </listeners>
+</suite>

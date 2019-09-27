@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/repair_server/repair_server.iml" filepath="$PROJECT_DIR$/repair_server/repair_server.iml" />
       <module fileurl="file://$PROJECT_DIR$/repair_tools/repair_tools.iml" filepath="$PROJECT_DIR$/repair_tools/repair_tools.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
     </modules>
   </component>

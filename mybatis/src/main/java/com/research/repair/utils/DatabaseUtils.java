@@ -1,0 +1,21 @@
+package com.research.repair.utils;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import sun.security.util.Resources_sv;
+
+import java.io.IOException;
+import java.io.Reader;
+
+public class DatabaseUtils {
+    public static SqlSession getSqlSession() throws IOException {
+        Reader reader = Resources.getResourceAsReader("databaseConfig.xml");
+        SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(reader);
+
+        //sqlSession就是能够执行配置文件中的sql语句
+        SqlSession sqlSession = factory.openSession();
+        return  sqlSession;
+    }
+}
